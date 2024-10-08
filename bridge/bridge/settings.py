@@ -89,9 +89,13 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': '5432',
     },
-    'sqlite': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    'sqlserver': {
+        'ENGINE': 'sql_server.pyodbc',
+        'NAME': 'Personal',
+        'USER': 'jewel',
+        'PASSWORD': 'jewel123',
+        'HOST': 'DESKTOP-D0M2JPK',  # e.g., 'localhost' or 'server\instance'
+        'PORT': '1433',  # Default SQL Server port, can be omitted if using default
     }
 }
 
