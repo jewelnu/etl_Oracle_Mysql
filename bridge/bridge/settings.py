@@ -83,19 +83,22 @@ WSGI_APPLICATION = 'bridge.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'nuexam',
+        'NAME': 'nuict',
         'USER': 'postgres',
         'PASSWORD': 'jeweland',
         'HOST': 'localhost',
         'PORT': '5432',
     },
     'sqlserver': {
-        'ENGINE': 'sql_server.pyodbc',
+        'ENGINE': 'mssql',
         'NAME': 'Personal',
         'USER': 'jewel',
         'PASSWORD': 'jewel123',
-        'HOST': 'DESKTOP-D0M2JPK',  # e.g., 'localhost' or 'server\instance'
+        'HOST': 'localhost',  # e.g., 'localhost' or 'server\instance'
         'PORT': '1433',  # Default SQL Server port, can be omitted if using default
+         'OPTIONS': {
+            'driver': 'ODBC Driver 11 for SQL Server',  # Specify the correct driver
+        },
     }
 }
 
@@ -178,7 +181,7 @@ CELERY_BROKER_URL = 'redis://localhost:6379/0'
 CELERY_BEAT_SCHEDULE = {
     'run_etl_every_hour': {
         'task': 'cronjob.tasks.run_etl',
-        'schedule': 3600,  # Run every hour (3600 seconds)
+        'schedule': 30,  # Run every hour (3600 seconds)
     },
 }
 #######################################################

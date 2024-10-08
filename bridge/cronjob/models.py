@@ -1,21 +1,89 @@
 from django.db import models
 
-# MySQL Models
-class MySQLTable(models.Model):
-    name = models.CharField(max_length=255)
-    value = models.IntegerField()
-    updated_at = models.DateTimeField(auto_now=True)
+
+
+class Postgresdata(models.Model):
+    uid = models.CharField(blank=True, null=True)
+    mid = models.CharField(blank=True, null=True)
+    reg_no = models.CharField(blank=True, null=True)
+    roll_no = models.CharField(blank=True, null=True)
+    std_name = models.CharField(blank=True, null=True)
+    fname = models.CharField(blank=True, null=True)
+    mname = models.CharField(blank=True, null=True)
+    c_code = models.CharField(blank=True, null=True)
+    centre = models.CharField(blank=True, null=True)
+    issu_date = models.CharField(blank=True, null=True)
+    old_col = models.CharField(blank=True, null=True)
+    col_code = models.CharField(blank=True, null=True)
+    college = models.CharField(blank=True, null=True)
+    sub_code = models.CharField(blank=True, null=True)
+    sess = models.CharField(blank=True, null=True)
+    sif = models.CharField(blank=True, null=True)
+    opt_all = models.CharField(blank=True, null=True)
+    opt_all_ne = models.CharField(blank=True, null=True)
+    opt_all_ol = models.CharField(blank=True, null=True)
+    session = models.CharField(blank=True, null=True)
+    std_type = models.CharField(blank=True, null=True)
+    course = models.CharField(blank=True, null=True)
+    course_nam = models.CharField(blank=True, null=True)
+    adm_roll = models.CharField(blank=True, null=True)
+    abs_sub = models.CharField(blank=True, null=True)
+    exm_fee = models.CharField(blank=True, null=True)
+    year = models.CharField(blank=True, null=True)
+    sdate = models.CharField(blank=True, null=True)
+    confirm_da = models.CharField(blank=True, null=True)
+    status = models.CharField(blank=True, null=True)
+    complete = models.CharField(blank=True, null=True)
+    std_status = models.CharField(blank=True, null=True)
+    imp_all = models.CharField(blank=True, null=True)
+    syll = models.CharField(blank=True, null=True)
+    syll_yr = models.CharField(blank=True, null=True)
+    confirm_d1 = models.CharField(blank=True, null=True)
 
     class Meta:
-        db_table = 'mysql_table'
-        managed = False  # This table already exists in the MySQL server
+        managed = False
+        db_table = 'degree_data'
 
-# Oracle Model
-class OracleTable(models.Model):
-    name = models.CharField(max_length=255)
-    value = models.IntegerField()
-    updated_at = models.DateTimeField()
+class MSsqldata(models.Model):
+    uid = models.TextField(blank=True, null=True)
+    mid = models.TextField(blank=True, null=True)
+    reg_no = models.TextField(blank=True, null=True)
+    roll_no = models.TextField(blank=True, null=True)
+    std_name = models.TextField(blank=True, null=True)
+    fname = models.TextField(blank=True, null=True)
+    mname = models.TextField(blank=True, null=True)
+    c_code = models.TextField(blank=True, null=True)
+    centre = models.TextField(blank=True, null=True)
+    issu_date = models.TextField(blank=True, null=True)
+    old_col = models.TextField(blank=True, null=True)
+    col_code = models.TextField(blank=True, null=True)
+    college = models.TextField(blank=True, null=True)
+    sub_code = models.TextField(blank=True, null=True)
+    sess = models.TextField(blank=True, null=True)
+    sif = models.TextField(blank=True, null=True)
+    opt_all = models.TextField(blank=True, null=True)
+    opt_all_ne = models.TextField(blank=True, null=True)
+    opt_all_ol = models.TextField(blank=True, null=True)
+    session = models.TextField(blank=True, null=True)
+    std_type = models.TextField(blank=True, null=True)
+    course = models.TextField(blank=True, null=True)
+    course_nam = models.TextField(blank=True, null=True)
+    adm_roll = models.TextField(blank=True, null=True)
+    abs_sub = models.TextField(blank=True, null=True)
+    exm_fee = models.TextField(blank=True, null=True)
+    year = models.TextField(blank=True, null=True)
+    sdate = models.TextField(blank=True, null=True)
+    confirm_da = models.TextField(blank=True, null=True)
+    status = models.TextField(blank=True, null=True)
+    complete = models.TextField(blank=True, null=True)
+    std_status = models.TextField(blank=True, null=True)
+    imp_all = models.TextField(blank=True, null=True)
+    syll = models.TextField(blank=True, null=True)
+    syll_yr = models.TextField(blank=True, null=True)
+    confirm_d1 = models.TextField(blank=True, null=True)
 
     class Meta:
-        db_table = 'oracle_table'
-        managed = False  # This table already exists in the Oracle server
+        managed = False
+        db_table = 'degree_data'
+
+
