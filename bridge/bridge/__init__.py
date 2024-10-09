@@ -1,6 +1,3 @@
-import pymysql
-
-pymysql.install_as_MySQLdb()
 
 # bridge/__init__.py
 
